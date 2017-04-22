@@ -502,6 +502,7 @@ function updatePositions() {
   var items = document.querySelectorAll('.mover');
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin(scrollTopCalc + (i % 5));
+    console.log("Phase value: " + phase);
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
