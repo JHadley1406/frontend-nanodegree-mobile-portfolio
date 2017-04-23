@@ -504,7 +504,7 @@ function updatePositions() {
     var phase = Math.sin(scrollTopCalc + (i % 5));
     //items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
     translateVal = items[i].basicLeft + 100 * phase + 'px';
-    items[i].style.transform = "translateX("+translateVal+")";
+    items[i].style.transform = "translateY("+items[i].basicLeft + 100 * phase + 'px'+")";
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -532,7 +532,6 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.height = "100px";
     elem.style.width = "73.333px";
     elem.basicLeft = (i % cols) * s;
-    console.log("basic left val: " + elem.basicLeft);
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     document.querySelector("#movingPizzas1").appendChild(elem);
   }
