@@ -423,12 +423,15 @@ function determineDx (elem, size) {
   // Changes the slider value to a percent width
   function sizeSwitcher (size) {
     switch(size) {
-      case "1":
-        return 0.25;
-      case "2":
-        return 0.3333;
-      case "3":
+        case "1":
         return 0.5;
+        //return 0.25;
+      case "2":
+        return 1;
+        //return 0.3333;
+      case "3":
+        return 1.5;
+        //return 0.5;
       default:
         console.log("bug in sizeSwitcher");
     }
