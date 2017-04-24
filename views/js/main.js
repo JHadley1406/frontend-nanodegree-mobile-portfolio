@@ -435,6 +435,7 @@ function determineDx (elem, size) {
   }
 
   var newSize = sizeSwitcher(size);
+  return newSize
   var dx = (newSize - oldSize) * windowWidth;
 
   return dx;
@@ -447,7 +448,7 @@ function changePizzaSizes(size) {
     var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
     console.log("New Width = " + newwidth);
     console.log("Old Width = " + document.querySelectorAll(".randomPizzaContainer")[i].style.width);
-    document.querySelectorAll(".randomPizzaContainer")[i].style.transform = "scaleX(2)";
+    document.querySelectorAll(".randomPizzaContainer")[i].style.transform = "scaleX("+dx+")";
   }
 }
 
