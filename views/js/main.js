@@ -373,8 +373,8 @@ var pizzaElementGenerator = function(i) {
   pizzaDescriptionContainer = document.createElement("div");
 
   pizzaContainer.classList.add("randomPizzaContainer");
-  pizzaContainer.style.width = "33.33%";
-  pizzaContainer.style.height = "325px";
+  //pizzaContainer.style.width = "33.33%";
+  //pizzaContainer.style.height = "325px";
   pizzaContainer.id = "pizza" + i;                // gives each pizza element a unique id
   pizzaImageContainer.style.width="35%";
 
@@ -442,11 +442,12 @@ function determineDx (elem, size) {
 
 // Iterates through pizza elements on the page and changes their widths
 function changePizzaSizes(size) {
-  for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
-    var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
-    var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
-    document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
-  }
+
+  //for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
+  //  var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
+  //  var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
+  //  document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
+  //}
 }
 
 // resizePizzas(size) is called when the slider in the "Our Pizzas" section of the website moves.
