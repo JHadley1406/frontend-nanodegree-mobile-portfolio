@@ -435,7 +435,6 @@ function determineDx (elem, size) {
   }
 
   var newSize = sizeSwitcher(size);
-  return newSize;
   var dx = (newSize - oldSize) * windowWidth;
 
   return dx;
