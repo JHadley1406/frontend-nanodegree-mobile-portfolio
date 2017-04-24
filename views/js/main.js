@@ -442,14 +442,11 @@ function determineDx (elem, size) {
 
 // Iterates through pizza elements on the page and changes their widths
 function changePizzaSizes(size) {
-  var dx = determineDx(document.querySelectorAll(".randomPizzaContainer"), size);
-  var newwidth = (document.querySelectorAll(".randomPizzaContainer").offsetWidth + dx) + 'px';
-  document.querySelectorAll(".randomPizzaContainer").style.width = newwidth;
-  //for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
-  //  var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
-  //  var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
-  //  document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
-  //}
+  for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
+    var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
+    var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
+    document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
+  }
 }
 
 // resizePizzas(size) is called when the slider in the "Our Pizzas" section of the website moves.
